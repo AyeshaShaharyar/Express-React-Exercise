@@ -11,8 +11,9 @@ repos.get('/', async (req, res) => {
   res.header('Cache-Control', 'no-store');
   res.setHeader('Content-Type', 'application/json');
   if (apiResponse) {
+    const mergedArray = [...localFile, ...apiResponse];
     res.status(200);
-    res.send(apiResponse);
+    res.send(mergedArray);
   } else {
     res.status(500).send('Api Response Error');
   }

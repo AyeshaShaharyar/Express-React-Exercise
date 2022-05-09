@@ -13,7 +13,7 @@ repos.get('/', async (req, res) => {
   if (apiResponse) {
     const mergedArray = [...localFile, ...apiResponse];
     res.status(200);
-    res.send(mergedArray);
+    res.send(mergedArray.filter((item) => item.fork === false));
   } else {
     res.status(500).send('Api Response Error');
   }

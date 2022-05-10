@@ -15,6 +15,10 @@ export default function List() {
     }
   }, []);
 
+  const sortedListByDate = list.sort((a, b) =>
+    b.created_at.localeCompare(a.created_at)
+  );
+
   return (
     <div>
       <h1>list of repositories </h1>
@@ -26,7 +30,7 @@ export default function List() {
             <th>Language</th>
             <th>Forks</th>
           </tr>
-          {list.map((item) => {
+          {sortedListByDate.map((item) => {
             return (
               <tr key={item.id}>
                 <td>{item.name}</td>

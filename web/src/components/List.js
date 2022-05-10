@@ -21,7 +21,6 @@ export default function List() {
 
   return (
     <div>
-      <h1 className="heading">list of repositories </h1>
       <table className="table">
         <tbody>
           <tr>

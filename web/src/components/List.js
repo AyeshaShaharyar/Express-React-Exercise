@@ -17,7 +17,9 @@ export default function List(props) {
   // const sortedListByDate = list.sort((a, b) =>
   //   b.created_at.localeCompare(a.created_at)
   // );
- 
+  function handleClick() {
+    alert('row got clicked');
+  }
 
   return (
     <div>
@@ -31,7 +33,7 @@ export default function List(props) {
           </tr>
           {/* {props.list.map((item) => {
             return ( */}
-          <tr>
+          <tr onClick={() => handleClick()}>
             <td>{props.list.name}</td>
             <td>{props.list.description}</td>
             <td>{props.list.language}</td>

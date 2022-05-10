@@ -26,9 +26,9 @@ export default function List() {
             <th>Language</th>
             <th>Forks</th>
           </tr>
-          {list.map((item, index) => {
+          {list.map((item) => {
             return (
-              <tr key={index}>
+              <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>{item.description}</td>
                 <td>{item.language}</td>

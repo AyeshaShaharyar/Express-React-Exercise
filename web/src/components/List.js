@@ -1,24 +1,11 @@
-import { React } from 'react';
+import { React, useState } from 'react';
+import RepoDetails from './RepoDetails';
 
 export default function List(props) {
-  // const [list, setList] = useState([]);
+  const [showDetails, setShowDetails] = useState(false);
 
-  // useEffect(() => {
-  //   const URL = `http://localhost:4000/repos`;
-  //   try {
-  //     axios.get(URL).then((response) => {
-  //       setList(response.data);
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, []);
-
-  // const sortedListByDate = list.sort((a, b) =>
-  //   b.created_at.localeCompare(a.created_at)
-  // );
   function handleClick() {
-    alert('row got clicked');
+    setShowDetails(true);
   }
 
   return (
@@ -31,16 +18,20 @@ export default function List(props) {
             <th>Language</th>
             <th>Forks</th>
           </tr>
-          {/* {props.list.map((item) => {
-            return ( */}
-          <tr onClick={() => handleClick()}>
+
+          <tr key={props.list.id} onClick={() => handleClick()}>
             <td>{props.list.name}</td>
             <td>{props.list.description}</td>
             <td>{props.list.language}</td>
             <td>{props.list.forks_count}</td>
           </tr>
-          {/* );
-          })} */}
+
+          {showDetails && (
+            <RepoDetails
+              author={props.list.owner.login}
+              commit_date={props.list.updated_at}
+            />
+          )}
         </tbody>
       </table>
     </div>

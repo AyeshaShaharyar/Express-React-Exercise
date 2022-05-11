@@ -13,6 +13,7 @@ export default function RepoDetails(props) {
       <tr>
         <td>{props.author}</td>
         <td>{props.commit_date}</td>
+        <td>{props.message}</td>
       </tr>
     </div>
   );

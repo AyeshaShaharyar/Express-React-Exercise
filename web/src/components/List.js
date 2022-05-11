@@ -30,6 +30,7 @@ export default function List(props) {
             <RepoDetails
               author={props.list.owner.login}
               commit_date={props.list.updated_at}
+              message={props.list.description}
             />
           )}
         </tbody>

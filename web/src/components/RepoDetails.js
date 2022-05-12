@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 export default function RepoDetails(props) {
   const [readMe, setReadMe] = useState(null);
@@ -29,8 +30,8 @@ export default function RepoDetails(props) {
         <td>{props.message}</td>
       </tr>
       <div>
-        <h3>ReadME</h3>
-        <p>{readMe}</p>
+        <h2>ReadME</h2>
+        <ReactMarkdown>{readMe}</ReactMarkdown>
       </div>
     </div>
   );

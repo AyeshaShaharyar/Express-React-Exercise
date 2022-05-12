@@ -24,6 +24,9 @@ export default function Button() {
 
   //filtering data
   function handleBtn(e) {
+    if (e.target.value === 'Back') {
+      setfilteredList(sortedListByDate);
+    }
     if (e.target.value === 'All') {
       setfilteredList(sortedListByDate);
     } else {
@@ -49,6 +52,9 @@ export default function Button() {
       </button>
       <button value="PHP" onClick={(e) => handleBtn(e)}>
         PHP
+      </button>
+      <button value="Back" onClick={(e) => handleBtn(e)}>
+        Go to Main Page
       </button>
 
       {filteredList.map((item) => (

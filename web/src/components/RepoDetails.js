@@ -28,7 +28,7 @@ export default function RepoDetails(props) {
 
       <tr>
         <td>{props.author}</td>
-        <td>{dayjs(props.updated_at).format('DD/MM/YYYY')}</td>
+        <td>{dayjs(props.commit_date).format('DD/MM/YYYY')}</td>
         <td>{props.message}</td>
       </tr>
       <div>

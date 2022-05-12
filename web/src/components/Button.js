@@ -54,7 +54,11 @@ export default function Button() {
       <button value="PHP" onClick={(e) => handleBtn(e)}>
         PHP
       </button>
-      <button value="Back" onClick={(e) => handleBtn(e)}>
+      <button
+        className="button-back"
+        value="Back"
+        onClick={(e) => handleBtn(e)}
+      >
         Go to Main Page
       </button>
 

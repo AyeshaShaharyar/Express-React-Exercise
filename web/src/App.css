@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 10rem 0 10rem;
+  padding: 5rem;
 }
 
 .heading {
@@ -29,13 +29,15 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 
 td,
 th {
-  border: 1px solid #dddddd;
+  border: 1px solid #b1b1b1;
   text-align: left;
   padding: 8px;
+  cursor: pointer;
 }
 
 tr:nth-child(even) {
@@ -53,4 +55,8 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.button-back{
+ margin-left: 22rem;
 }

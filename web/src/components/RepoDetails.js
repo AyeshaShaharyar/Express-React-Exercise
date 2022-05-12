@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import * as dayjs from 'dayjs';
 
 export default function RepoDetails(props) {
   //get readme data from url provided
@@ -27,7 +28,7 @@ export default function RepoDetails(props) {
 
       <tr>
         <td>{props.author}</td>
-        <td>{props.commit_date}</td>
+        <td>{dayjs(props.updated_at).format('DD/MM/YYYY')}</td>
         <td>{props.message}</td>
       </tr>
       <div>

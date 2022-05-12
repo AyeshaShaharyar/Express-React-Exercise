@@ -3,6 +3,7 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 
 export default function RepoDetails(props) {
+  //get readme data from url provided
   const [readMe, setReadMe] = useState(null);
 
   useEffect(() => {

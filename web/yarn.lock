@@ -8972,3 +8972,8 @@
   "integrity" "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
   "resolved" "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   "version" "0.1.0"
+
+"zero-md@^2.3.5":
+  "integrity" "sha512-kthUPnUJTyvikQqLR+6lsVO7RNV2XbnbY5DtWVLeatXi3GW5ZZJhwjpXBDX/1DxH+FImcIe5DOnhF4KUDqxEsA=="
+  "resolved" "https://registry.npmjs.org/zero-md/-/zero-md-2.3.5.tgz"
+  "version" "2.3.5"

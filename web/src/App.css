@@ -1,3 +1,10 @@
+body {
+  background-color: #282c34;
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+
 .App {
   text-align: left;
   background-color: azure;
@@ -9,17 +16,23 @@
 }
 
 .heading {
-  background-color: #282c34;
   min-height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: Red;
 }
 
-td, th {
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -27,4 +40,17 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }

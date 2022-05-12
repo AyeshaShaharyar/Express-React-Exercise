@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import List from './List';
+import '../App.css';
 
 export default function Button() {
   //get data from api
